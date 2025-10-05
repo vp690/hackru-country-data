@@ -1,0 +1,11 @@
+hackru/country_data/service/impl/CountryDataServiceImpl.class
+hackru/country_data/model/FootprintScores.class
+hackru/country_data/model/CountryLinks.class
+hackru/country_data/model/EmissionScores.class
+hackru/country_data/model/Scores.class
+hackru/country_data/service/CountryDataService.class
+hackru/country_data/CountryDataApplication.class
+hackru/country_data/model/EnergyScores.class
+hackru/country_data/controller/CountryDataController.class
+hackru/country_data/model/CountryResponse.class
+hackru/country_data/model/CountryRequest.class
