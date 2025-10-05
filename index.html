@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paris Compass — Climate Policy Compliance Tracker</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <!-- Welcome Screen -->
+    <section id="welcome" class="welcome" role="region" aria-label="Welcome screen">
+      <div class="brand">Paris Compass</div>
+      <p class="subtitle">
+        A global dashboard that visualizes how every UN-recognized country is performing against the
+        Paris Agreement across Emissions, Energy Usage, and Ecological Footprint.
+      </p>
+      <button class="btn" id="startBtn" type="button" aria-label="Start Paris Compass">Start</button>
+    </section>
+
+    <!-- Climate Gauge Screen -->
+    <section id="gauge" class="card" style="display:none" role="region" aria-label="Climate Gauge dashboard">
+      <div class="toolbar">
+        <div class="title">Climate Gauge</div>
+        <div class="topic-tabs" role="tablist" aria-label="Index topics">
+          <button class="tab" role="tab" aria-pressed="true"  data-topic="emissions">Emissions</button>
+          <button class="tab" role="tab" aria-pressed="false" data-topic="energy">Energy Usage</button>
+          <button class="tab" role="tab" aria-pressed="false" data-topic="eco_footprint">Ecological Footprint</button>
+        </div>
+      </div>
+
+      <div id="map" role="application" aria-label="World map colored by index"></div>
+
+      <div class="panel">
+        <!-- Legend with 0 (Bad) on left and 1 (Good) on right -->
+        <div class="legend" aria-label="Index legend">
+          <span class="legend-left">0 (Bad)</span>
+          <div class="legend-bar" aria-hidden="true"></div>
+          <span class="legend-right">1 (Good)</span>
+        </div>
+
+        <div class="data-badges">
+          <div class="badge">Updated: <span id="lastUpdated">—</span></div>
+          <div class="badge">Topic: <span id="topicLabel">Emissions</span></div>
+          <div class="badge">Data Source: <span id="sourceLabel">—</span></div>
+        </div>
+      </div>
+
+      <p class="footer-note">
+        Click a country to see a summary and sources. Colors represent normalized index values (0–1),
+        where blue aligns better with Paris targets.
+      </p>
+    </section>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <!-- App JS -->
+  <script src="./app.js"></script>
+</body>
+</html>
